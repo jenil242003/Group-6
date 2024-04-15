@@ -53,6 +53,6 @@ Through this project, I learned about machine learning algorithms, Flask web dev
 
 ## Credits
 
-- [Your Name](https://github.com/yourusername) - Project Developer
+(https://github.com/jenil242003/Group-6.git)
 
 
