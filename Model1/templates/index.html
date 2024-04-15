@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Class Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .login {
+      background-color: #fff;
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+ <div class="login">
+  <h1>Flower Class Prediction</h1>
+
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Sepal_Length" placeholder="Sepal Length" required="required" />
+      <input type="text" name="Sepal_Width" placeholder="Sepal Width" required="required" />
+      <input type="text" name="Petal_Length" placeholder="Petal Length" required="required" />
+      <input type="text" name="Petal_Width" placeholder="Petal Width" required="required" />
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <a href="/data"><button>View Data</button></a>
+    <a href="/about"><button>About</button></a>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
